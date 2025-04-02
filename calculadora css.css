@@ -1,0 +1,85 @@
+body{
+    background-image: url(https://plus.unsplash.com/premium_photo-1681469490587-cf7ff1d6fc00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbm8lMjBkZSUyMGZ1bmRvJTIwZGluaGVpcm98ZW58MHx8MHx8fDA%3D);
+    background-size: cover;
+}
+.container1{
+background-color: rgb(249, 249, 249);
+padding: 10px;
+border: solid 2px; border-color: rgb(3, 3, 78);
+border-radius: 20px;
+width: 600px;
+margin: 100px;
+}
+
+.line{
+    width: 70%;
+  border-bottom: 1px solid #010c29;
+}
+
+.form {
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(0, 0, 0, 0.39);
+    --border-after-color: #000000;
+    --input-hovered-color: #0000001f;
+    position: relative;
+    width: var(--width-of-input);
+   }
+   .input {
+
+    color: #080606;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+   }
+   .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+   }
+  
+   input:hover {
+    background: var(--input-hovered-color);
+   }
+   
+   input:focus {
+    outline: none;
+   }
+   input:focus ~ .input-border {
+    width: 100%;
+   }
+ 
+   .btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #665703;
+    outline: none;
+    transition: 1s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+ 
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #ffe571;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora css.css">
+</head>
+</style>
+<body>
+    <center>
+    <div class="container1">
+    <h2>Calculadora de Juros Compostos</h2>
+    <h4> by Davi Escudero</h4>
+    <div class="line"></div>
+        <h3>Vamos Começar?!</h3>
+        <div class="form">
+    Inserir aporte mensal (R$) : <input class="input" id="aporte"><span class="input-border"></span>
+    <br>
+    <br>
+    Inserir juros por mês (%) : <input class="input" id="juros"><span class="input-border"></span>
+    <br>
+    <br>
+    Quantos meses durará seu investimento : <input class="input" id="mes"><span class="input-border"></span>
+</div>
+    <br>
+    <br>
+    <button class="btn " onclick="calcular()">Calcular Riqueza Gerada</button>
+    <br>
+    <br>
+    <div id="txt"></div>
+    <br>
+    <br>
+        
+</center>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var investimento = aporte.value * ((1 + Number(juros.value) / 100) ** mes.value - 1) / (Number(juros.value) / 100);
+        var total = aporte.value * mes.value;
+        var axjuros = Number(investimento) - Number(total);
+        
+        function formatarDinheiro(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        txt.innerHTML = `Em <b>${mes.value} meses</b>, você terá acumulado uma riqueza de <b>${formatarDinheiro(investimento)}</b> <br>
+        onde você terá investido <b>${formatarDinheiro(total)}</b> e terá recebido um total em juros de <b>${formatarDinheiro(axjuros)}</b>`;
+    }
+</script>
